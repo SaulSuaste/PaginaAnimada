@@ -72,6 +72,7 @@ nav{
 
 .enlaces-header{
     font-weight: 300;
+    transition: ease-in-out 0.5s;
 }
 
 .enlaces-header a{
@@ -87,7 +88,7 @@ nav{
     z-index: 100;
     cursor: pointer;
     display: none;/*no se muestra en la pagina*/
-    /* transition: color 0.5s ease-in; */
+    transition: color 0.5s ease-in;
 }
 
 .hamburguer i{
@@ -513,7 +514,26 @@ footer{
     }
 
     .enlaces-header{
-        display: none;
+        position: fixed;
+        background: #1fde82;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+    }
+
+    .nav .menuDos{ /* Esta clase se agregara con JS */
+        clip-path: circle(150% at 100% 0);
+        -webkit-clip-path: circle(150% at 100% 0);
+    }
+
+    .enlaces-header a{
+        color: #fff;
     }
 
     .hamburguer{
